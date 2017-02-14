@@ -1,4 +1,4 @@
----- Workspace: GameDev-Practice ----
+---- Workspace: Blackjack MC ----
 
 workspace("Blackjack MC")
 configurations({

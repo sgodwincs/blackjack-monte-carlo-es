@@ -204,12 +204,12 @@ void EvaluateAndImprovePolicy(
 {
 	for (auto& pair : stateActionPairs)
 	{
-		auto& returnData = returnsMap[pair];
+		auto& returnData{ returnsMap[pair] };
 		++returnData;
 		actionValueMap[pair] = actionValueMap[pair] + ((reward - actionValueMap[pair]) / returnData);
 
-		auto& state = pair.first;
-		bool shouldHit = false;
+		auto& state{ pair.first };
+		bool shouldHit{ false };
 
 		if (actionValueMap[{ state, true }] > actionValueMap[{ state, false }])
 		{
@@ -285,9 +285,9 @@ void GenerateStart(
 
 void PerformMonteCarloES(std::size_t index, unsigned int lowerBound, unsigned int upperBound)
 {
-	ActionValueMap& actionValueMap = actionValuesMaps[index];
-	ReturnsMap& returns = returnsMaps[index];
-	PolicyMap& policyMap = policyMaps[index];
+	ActionValueMap& actionValueMap{ actionValuesMaps[index] };
+	ReturnsMap& returns = { returnsMaps[index] };
+	PolicyMap& policyMap = { policyMaps[index] };
 
 	for (std::size_t playerSum{ 11 }; playerSum < 22; ++playerSum)
 	{
@@ -357,16 +357,6 @@ int main()
 	{
 		thread.join();
 	}
-
-	/*
-	//std::thread t1{ PerformMonteCarloES, 0, 1, 3 };
-	std::thread t2{ PerformMonteCarloES, 1, 4, 6 };
-	//std::thread t3{ PerformMonteCarloES, 2, 7, 8 };
-	//std::thread t4{ PerformMonteCarloES, 3, 9, 10 };
-	//t1.join();
-	t2.join();
-	//t3.join();
-	//t4.join();*/
 
 	for (std::size_t playerSum{ 21 }; playerSum > 10; --playerSum)
 	{

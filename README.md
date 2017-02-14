@@ -19,7 +19,7 @@ This was written to obtain a better understanding of the Monte Carlo approach fo
 ----
 ## How to run?
 
-There is the Python version and there is the C++ version. The python version exists in the `python` directory and can by run by simply running `python blackjack.py`. By default, it runs for 2 million iterations and takes about a minute. The C++ version exists in the `c++` folder, uses premake5, and can be configured for your build tools via a command such as `premake5 vs2015`. By default, it runs for 1 billion iterations and takes around 30 minutes to complete, although this can be changed via the constant variable.
+There is the Python version and there is the C++ version. The python version exists in the `python` directory and can by run by simply running `python blackjack.py`. By default, it runs for 2 million iterations and takes about a minute. The C++ version exists in the `c++` folder, uses premake5, and can be configured for your build tools via a command such as `premake5 vs2015`. By default, it runs for 1 billion iterations and takes around 30 minutes to complete, although this can be changed via the constant variable. The C++ version is rather messy due it all being in one file and having to specify hash functions, etc.
 
 ----
 ## Result
