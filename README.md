@@ -34,4 +34,4 @@ And the C++ version (running for 1 billion iterations):
 
 ![C++ With Usable Ace](https://github.com/sgodwincs/blackjack-monte-carlo-es/blob/master/c++_with_usable_ace.png) ![C++ Without Usable Ace](https://github.com/sgodwincs/blackjack-monte-carlo-es/blob/master/c++_without_usable_ace.png)
 
-The C++ version obviously generated the optimal policy because of more iterations, but the Python version is near optimal. Specifically, in some runs the Python version would find the optimal policy without usable aces, but it had a hard time finding the optimal policy with usable aces.
+Forgot to label the graphs, but the X-axis is the dealer's showing card, the Y-axis is the player's current sum, red points are when you should hit, and finally blue points are when you should stick. The C++ version obviously generated the optimal policy because of more iterations, but the Python version is near optimal. Specifically, in some runs the Python version would find the optimal policy without usable aces, but it had a hard time finding the optimal policy with usable aces.
